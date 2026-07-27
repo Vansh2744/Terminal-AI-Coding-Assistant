@@ -11,6 +11,8 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@types/diff": "^7.0.2",
+    "@types/inquirer": "^9.0.10",
     "@types/node": "^26.1.1",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2"
