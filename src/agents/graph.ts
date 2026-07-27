@@ -24,7 +24,6 @@ Rules:
 - Never assume file contents — read them first if you haven't already seen them
   in this conversation.`;
 
-// checkpointer gives the graph built-in memory across turns, keyed by thread_id
 const checkpointer = new MemorySaver();
 
 export const agent = createReactAgent({
