@@ -27,7 +27,6 @@ export const editFile = tool(
 
     const updated = original.replace(oldStr, newStr);
 
-    // build a colored diff preview
     const diffOutput = diffLines(original, updated)
       .map((part) => {
         const color = part.added ? chalk.green : part.removed ? chalk.red : chalk.gray;

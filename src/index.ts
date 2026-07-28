@@ -10,7 +10,7 @@ import { randomUUID } from "crypto";
 const program = new Command();
 
 program
-  .name("termini-ai")
+  .name("terminal-ai-coding-assistant")
   .description("A terminal-based AI coding assistant")
   .option("-s, --session <name>", "session name to resume or create", "default")
   .parse(process.argv);

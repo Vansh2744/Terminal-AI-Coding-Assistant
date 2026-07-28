@@ -28,8 +28,8 @@ export function renderBanner() {
   console.log(
     chalk.bold.green(`
   ┌─────────────────────────────┐
-  │      termini-ai  v0.1       │
-  │  type "exit" to quit        │
+  │ terminal-ai-coding-assistant│
+  │    type "exit" to quit      │
   └─────────────────────────────┘
 `)
   );

@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import os from "os";
 
-const SESSION_DIR = path.join(os.homedir(), ".termini-ai", "sessions");
+const SESSION_DIR = path.join(os.homedir(), ".terminal-ai", "sessions");
 
 async function ensureDir() {
   await fs.mkdir(SESSION_DIR, { recursive: true });

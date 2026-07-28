@@ -7,10 +7,9 @@ import { confirmAction } from "./permissionGate.js";
 
 const execAsync = promisify(exec);
 
-// crude first-pass guard — not a substitute for real sandboxing
 const DENYLIST = [
   /rm\s+-rf\s+\//, 
-  /:\(\)\{.*\};:/, // fork bomb
+  /:\(\)\{.*\};:/,
   /mkfs/,
   /dd\s+if=/,
   />\s*\/dev\/sd/,
@@ -32,8 +31,8 @@ export const runBash = tool(
     try {
       const { stdout, stderr } = await execAsync(command, {
         cwd: process.cwd(),
-        timeout: 30_000, // 30s guard against hanging commands
-        maxBuffer: 1024 * 1024, // 1MB output cap
+        timeout: 30_000,
+        maxBuffer: 1024 * 1024,
       });
       return stdout || stderr || "(command produced no output)";
     } catch (err: any) {
